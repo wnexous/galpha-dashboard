@@ -1,0 +1,1 @@
+export type pageStateType = "not-logged" | "logged" | "waiting"
