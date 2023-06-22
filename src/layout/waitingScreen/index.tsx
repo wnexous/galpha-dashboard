@@ -8,5 +8,8 @@ export default function WaitingScreen() {
             <div></div>
             <div></div>
         </div>
+        <span>
+            carregando...
+        </span>
     </div >
 }

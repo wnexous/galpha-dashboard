@@ -12,6 +12,7 @@
 
 .centralizeEllipsis {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -20,6 +21,19 @@
     bottom: 0;
     left: 0;
     position: fixed;
+
+    span {
+        opacity: 0%;
+        font-size: 1.5rem;
+        font-weight: 100;
+        animation-name: textAnimation;
+        animation-delay: 3s;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+    }
+
 
 }
 
@@ -82,5 +96,16 @@
 
     100% {
         transform: translate(24px, 0);
+    }
+}
+
+
+@keyframes textAnimation {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
     }
 }
