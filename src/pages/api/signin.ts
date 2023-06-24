@@ -42,8 +42,6 @@ function verifyLogin({ password, username }: signin): returnLoginInterface {
                 jwt.sign(
                     JSON.stringify({ userId: fetchUser.id }),
                     cryptPass)
-
-
         }
         else return { isLogged: false, message: "incorrect password" }
     }
