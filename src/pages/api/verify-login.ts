@@ -11,7 +11,6 @@ export default function handler(
     res: NextApiResponse<returnLoginInterface>
 ) {
     const userAuth = req.headers.authorization
-    console.log(userAuth);
 
     if (req.method == "POST" && userAuth) {
         const [type, token] = userAuth.split(" ")
@@ -27,4 +26,5 @@ export default function handler(
         }
         else res.send({ isLogged: false, message: "invalid type or token" })
     }
+    else res.send({ isLogged: false, message: "token not exists" })
 }

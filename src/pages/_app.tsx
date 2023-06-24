@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
     axios.post("/api/verify-login", {}, {
       headers: {
-        Authorization: cookies.get("token")
+        Authorization: cookies.get("token") || ""
       }
     }).then(request => {
       const loginResponse: returnLoginInterface = request.data
