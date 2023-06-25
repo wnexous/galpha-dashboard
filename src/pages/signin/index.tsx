@@ -2,10 +2,11 @@ import Card from '@/components/card'
 import styles from './styles.module.scss'
 import { FormEvent, useState } from 'react'
 import axios from 'axios'
-import { returnLoginInterface } from '../api/signin'
 import cookies from 'js-cookie'
 import InputText from '@/components/input/inputText'
 import InputPassword from '@/components/input/inputPassword'
+import { returnLoginInterface } from '@/interfaces/auth'
+import { authResponse } from '@/utils/login/responses'
 export default function Siginin() {
 
     const [username, setUsername] = useState("")
@@ -22,7 +23,7 @@ export default function Siginin() {
                 window.location.href = "/"
             } else {
                 setSubmitButton(false)
-                alert(loginResponse.message)
+                alert(authResponse(loginResponse.code))
             }
         }).catch(err => {
             setSubmitButton(false)
