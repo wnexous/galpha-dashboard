@@ -33,7 +33,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
 
-        {data?.map(usr => <div>{usr.name}</div>)}
+        {data?.map((usr, i) => <div key={i}>{usr.name}</div>)}
 
 
       </main>
