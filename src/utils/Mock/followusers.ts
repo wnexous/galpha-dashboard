@@ -1,6 +1,6 @@
-import { followUsers } from "@/interfaces/dataRequests";
+import { followUsersType } from "@/interfaces/dataRequests";
 
-export const UserFollowsData: followUsers = [
+export const UserFollowsData: followUsersType = [
     {
         age: 8,
         class: "4° ano B",

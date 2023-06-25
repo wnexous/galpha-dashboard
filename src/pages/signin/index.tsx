@@ -1,4 +1,3 @@
-import Card from '@/components/card'
 import styles from './styles.module.scss'
 import { FormEvent, useState } from 'react'
 import axios from 'axios'
