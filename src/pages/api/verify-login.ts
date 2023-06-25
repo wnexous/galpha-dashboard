@@ -1,10 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { returnLoginInterface } from "./signin";
 import jwt from "jsonwebtoken"
-
-const cryptPass = process.env.AUTH_CRYPT_KEY || "defaultCryptPass"
-
-const defaultAuthType = "Bearer"
+import { returnLoginInterface } from "@/interfaces/auth";
+import { verifyAuthToken } from "@/utils/Auth";
 
 export default function handler(
     req: NextApiRequest,
@@ -13,18 +10,7 @@ export default function handler(
     const userAuth = req.headers.authorization
 
     if (req.method == "POST" && userAuth) {
-        const [type, token] = userAuth.split(" ")
-
-        if (type && token) {
-            try {
-                const tokenDecrypt = jwt.verify(token, cryptPass)
-                if (tokenDecrypt && type == defaultAuthType) res.send({ isLogged: true, message: "" })
-                else res.send({ isLogged: false, message: "inválid token" })
-            } catch (error) {
-                res.send({ isLogged: false, message: "inválid token" })
-            }
-        }
-        else res.send({ isLogged: false, message: "invalid type or token" })
+        res.send(verifyAuthToken(userAuth))
     }
-    else res.send({ isLogged: false, message: "token not exists" })
+    else res.send({ isLogged: false, code: "wrong-token" })
 }

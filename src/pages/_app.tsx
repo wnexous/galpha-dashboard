@@ -8,7 +8,7 @@ import type { AppProps } from 'next/app'
 import cookies from 'js-cookie'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import { returnLoginInterface } from './api/signin'
+import { returnLoginInterface } from '@/interfaces/auth'
 
 
 
@@ -28,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
     }).then(request => {
       const loginResponse: returnLoginInterface = request.data
       setPageState(loginResponse.isLogged ? "logged" : "not-logged")
+
     })
 
   }, [router])
