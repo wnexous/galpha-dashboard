@@ -6,11 +6,12 @@ import { followUsersType } from '@/interfaces/dataRequests'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 import Cookies from 'js-cookie'
+import FollowupCard from '@/components/cards/FollowupCard'
 
 
 export default function Home() {
 
-  const [data, setData] = useState<followUsersType>()
+  const [data, setData] = useState<followUsersType[]>()
   const router = useRouter()
 
   useEffect(() => {
@@ -33,7 +34,8 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
 
-        {data?.map((usr, i) => <div key={i}>{usr.name}</div>)}
+        {data?.map((usr, i) => <div>{usr.name}</div>)}
+        {data?.map((usr, i) => <FollowupCard {...usr} key={i} />)}
 
 
       </main>

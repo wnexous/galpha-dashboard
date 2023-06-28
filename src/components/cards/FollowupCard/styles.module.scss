@@ -1,5 +1,12 @@
-.button{
+.container {
    background-color: lightgrey;
    color: black;
    border-radius: 20px;
+   img{
+      object-fit: cover;
+   }
+}
+
+.content {
+
 }

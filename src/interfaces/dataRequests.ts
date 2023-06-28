@@ -1,13 +1,14 @@
-export type followUsersType = [
-    {
+export type followUsersType = {
+    name: string
+    imagePath: string
+    school: {
         name: string
-        school: string
-        class: string
-        age: number
-        ta: string
-        imageId: string
-        specialist: { imageid: string, name: string }[]
+        classYear: number
+        classIdentifier: string
     }
-]
+    age: number
+    ta: string
+    specialist: { imagePath: string, name: string }[]
+}
 
 
