@@ -34,7 +34,6 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
 
-        {data?.map((usr, i) => <div>{usr.name}</div>)}
         {data?.map((usr, i) => <FollowupCard {...usr} key={i} />)}
 
 

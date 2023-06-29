@@ -8,7 +8,9 @@ export type followUsersType = {
     }
     age: number
     ta: string
-    specialist: { imagePath: string, name: string }[]
+    specialist: specialistInformationsInterface[]
 }
+
+export interface specialistInformationsInterface { imagePath: string, name: string }
 
 

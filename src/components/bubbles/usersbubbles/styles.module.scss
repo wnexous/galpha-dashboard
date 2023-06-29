@@ -1,0 +1,29 @@
+.content {
+    display: flex;
+
+    img {
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 100rem;
+        background-color: yellow;
+
+
+        &:nth-child(n + 2) {
+            margin-left: -15px;
+
+        }
+    }
+
+    span {
+        background-color: #7C7C7CE5;
+        width: 30px;
+        height: 30px;
+        border-radius: 100rem;
+        margin-left: -15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        color: white;
+    }
+}

@@ -1,12 +1,92 @@
 .container {
-   background-color: lightgrey;
+   width: 32rem;
    color: black;
    border-radius: 20px;
-   img{
+   padding: 0.75rem;
+   display: inline-flex;
+   gap: 0.85rem;
+   position: relative;
+   border: 1px solid rgba(0, 0, 0, 0.20);
+
+   img {
+      height: 76px;
+      width: 76px;
+      border-radius: 16px;
       object-fit: cover;
    }
 }
 
 .content {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
 
+.textContent {
+   span {
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.70);
+
+   }
+
+   color: rgba(0, 0, 0, 0.70);
+   font-size: 0.75rem;
+   display: flex;
+   flex-direction: column;
+
+   font-family: "Poppins-Regular"
+}
+
+.tag {}
+
+.topContent {}
+
+.fieldTextTag {
+   b {
+      line-height: 24px;
+      margin: 0;
+      font-family: "Poppins-Medium";
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: rgba(0, 0, 0, 0.85);
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      inline-size: 20rem;
+      text-transform: capitalize;
+   }
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.bottomContent {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   align-items: flex-end;
+}
+
+.ageContent {
+   font-size: 0.75rem;
+   display: flex;
+   align-items: center;
+
+
+   b {
+      color: rgba(0, 0, 0, 0.85)
+   }
+
+
+
+
+   color: rgba(0, 0, 0, 0.70);
+}
+
+.verticalLine {
+   height: 0.875rem;
+   width: 1px;
+   background-color: rgba(0, 0, 0, 0.85);
+   margin-inline: 0.5rem;
 }

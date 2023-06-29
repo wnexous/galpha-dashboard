@@ -12,6 +12,11 @@ export const UserFollowsData: followUsersType[] = [
         },
         specialist: [
             { imagePath: "specialist1.jpg", name: "Maria de Almeida Santos" },
+            { imagePath: "specialist1.jpg", name: "Maria de Almeida Santos" },
+            { imagePath: "specialist1.jpg", name: "Maria de Almeida Santos" },
+            { imagePath: "specialist1.jpg", name: "Maria de Almeida Santos" },
+            { imagePath: "specialist1.jpg", name: "Maria de Almeida Santos" },
+            { imagePath: "specialist1.jpg", name: "Maria de Almeida Santos" },
             { imagePath: "specialist1.jpg", name: "Pedro Afonso do Carmo" }
         ],
         ta: "Dislexia"
@@ -26,6 +31,8 @@ export const UserFollowsData: followUsersType[] = [
             classYear: 2
         },
         specialist: [
+            { imagePath: "specialist1.jpg", name: "Maria de Almeida Santos" },
+            { imagePath: "specialist1.jpg", name: "Maria de Almeida Santos" },
             { imagePath: "specialist1.jpg", name: "Maria de Almeida Santos" },
             { imagePath: "specialist1.jpg", name: "Pedro Afonso do Carmo" }
         ],
